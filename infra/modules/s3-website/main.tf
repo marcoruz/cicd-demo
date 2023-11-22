@@ -28,3 +28,7 @@ resource "aws_s3_bucket_public_access_block" "this" {
   ignore_public_acls      = false
   restrict_public_buckets = false
 }
+
+output "bucket_name" {
+  value = aws_s3_bucket.this.bucket
+}
